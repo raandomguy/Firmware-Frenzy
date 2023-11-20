@@ -1991,7 +1991,7 @@ There_Was_Nothing_There
 			{
 				Class Soldier
 				Name "Cow Mangler Soldier"
-				Skill Normal
+				Skill Hard
 				Item "The Cow Mangler 5000"
 				Item "Lord Cockswain's Pith Helmet"
 				ClassIcon soldier_mangler_v2
