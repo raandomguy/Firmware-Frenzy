@@ -1037,7 +1037,7 @@ WaveSchedule
 		{
 			Where spawnbot_giant
 			Name "burst"
-			WaitForAllDead "knights"
+			WaitForAllSpawned "knights"
 			TotalCount 4
 			MaxActive 4
 			SpawnCount 1
@@ -1090,7 +1090,7 @@ WaveSchedule
 			Name "cataclysm soldiers"
 			WaitForAllSpawned "demos"
 
-			TotalCount 16
+			TotalCount 26
 			MaxActive 8
 			SpawnCount 4
 			WaitBeforeStarting 0
