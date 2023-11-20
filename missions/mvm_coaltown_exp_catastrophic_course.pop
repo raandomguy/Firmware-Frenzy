@@ -622,12 +622,12 @@ WaveSchedule
 			Name "random"
 			
 			Where spawnbot
-			WaitForAllDead "giantsquads"
+			WaitForAllSpawned "wave2flares"
 			TotalCount 36
 			MaxActive 10
 			SpawnCount 2
 			WaitBetweenSpawns 1.5
-			WaitBeforeStarting 0
+			WaitBeforeStarting 10
 			TotalCurrency 150		
 			
 
@@ -1037,11 +1037,11 @@ WaveSchedule
 		{
 			Where spawnbot_giant
 			Name "burst"
-			WaitForAllDead "cpu soldiers"
+			WaitForAllDead "knights"
 			TotalCount 4
 			MaxActive 4
 			SpawnCount 1
-			WaitBeforeStarting 0
+			WaitBeforeStarting 10
 			WaitBetweenSpawns 5
 			TotalCurrency 50
 
@@ -1130,7 +1130,6 @@ WaveSchedule
 				TFBot
 				{	
 					Template T_TFBot_Giant_Demoman
-					ClassIcon demo_spammer
 					Attributes AlwaysFireWeapon
 				}
 				TFBot
@@ -1668,7 +1667,6 @@ WaveSchedule
 				TFBot
 				{
 					Template T_TFBot_Giant_Demoman
-					ClassIcon demo_spammer
 					Attributes AlwaysFireWeapon
 				}
 				TFBot
@@ -1933,9 +1931,6 @@ WaveSchedule
 				Tag nav_prefer_flank_left
 				BehaviorModifiers push
 				Item "The Huntsman"
-				
-				support limited
-
 				ItemAttributes
 				{
 					ItemName "The Huntsman"
@@ -1967,7 +1962,6 @@ WaveSchedule
 				Tag nav_prefer_flank_right
 				BehaviorModifiers push
 				Item "The Huntsman"
-
 				ItemAttributes
 				{
 					ItemName "The Huntsman"

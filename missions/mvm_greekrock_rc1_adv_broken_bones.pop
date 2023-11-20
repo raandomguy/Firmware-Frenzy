@@ -105,7 +105,7 @@ WaveSchedule
 				"attach particle effect" 704
 				"reload time decreased" 0.4
 				"item style override" 1
-				"is_australium_item" 1
+				"is australium item" 1
 				"fire rate bonus" 0.2
 				"damage bonus" 2
 				"turn to gold" 1
@@ -224,7 +224,7 @@ WaveSchedule
 		InitialCooldown 30
 		CooldownTime	30
 		DesiredCount	1
-		Where	spawnbot_mission_sentrybuster
+		Where	spawnbot_giant
 		
 		TFBot
 		{
@@ -1146,7 +1146,6 @@ WaveSchedule
 				ItemAttributes
 				{
 					ItemName "craftsmann_rocketlauncher_americanpastoral"
-					"projectile speed decreased" 0.65
 					"set_item_texture_wear" 0
 					"reload time decreased" -1
 					"fire rate bonus" 0.5
@@ -1288,7 +1287,7 @@ WaveSchedule
 				WeaponRestrictions PrimaryOnly
 				Name "Bow Shaker"
 				ClassIcon sniper_bow_multi
-				Health 45000
+				Health 60000
 				Scale 1.9
 				Item "The Swagman's Swatter"	
 				Item "The Toowoomba Tunic"
@@ -1392,7 +1391,6 @@ WaveSchedule
 				
 				CharacterAttributes
 				{
-					ItemName	"Jarate"
 					"effect bar recharge rate increased" 0.01
 					"applies snare effect" 0.35
 				}

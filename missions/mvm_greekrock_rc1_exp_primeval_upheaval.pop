@@ -1403,7 +1403,7 @@ WaveSchedule
 				"attach particle effect" 704
 				"reload time decreased" 0.4
 				"item style override" 1
-				"is_australium_item" 1
+				"is australium item" 1
 				"killstreak tier" 1
 				"fire rate bonus" 0.2
 				"damage bonus" 2

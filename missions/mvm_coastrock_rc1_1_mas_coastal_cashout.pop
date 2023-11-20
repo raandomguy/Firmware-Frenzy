@@ -9,7 +9,8 @@
 You_Can_Put_Anything_Here_Lol // WaveSchedule
 {
 	StartingCurrency	0
-	RespawnWaveTime	1
+	RespawnWaveTime 4
+	FixedRespawnWaveTime Yes
 	CanBotsAttackWhileInSpawnRoom	no
 	AddSentryBusterWhenKillCountExceeds	10
 	AddSentryBusterWhenDamageDealtExceeds	1337
@@ -262,16 +263,16 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			{
 				ItemName "The Original"
 				"damage bonus"	2.69420
-				"blast radius increased" 1.25
+				"blast radius increased" 1.33
 				"faster reload rate" 0.2
-				"fire rate bonus" 3.4
+				"fire rate bonus" 3.1
 				"Projectile speed increased" 0.5
 			}
 			CharacterAttributes
 			{
 				"move speed bonus"	0.5
-				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.4
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
 				"override footstep sound set" 3
 				"gesture speed increase" 3
 				"head scale" 1.7
@@ -406,7 +407,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				"increased jump height" 0.9
 				"damage force reduction" 0.1
 				"dmg from ranged reduced" 0.85
-				"attach	particle effect"	3083
+				"attach particle effect"	3083
 			}
 		}
 	}
@@ -494,7 +495,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				"increased jump height" 0.9
 				"damage force reduction" 0.1
 				"dmg from ranged reduced" 0.85
-				"attach	particle effect"	3083
+				"attach particle effect"	3083
 			}
 		}
 	}
@@ -723,6 +724,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
             {
 				Class	Heavy
 				Skill	Hard
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 		WaveSpawn
@@ -738,6 +744,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			{
 				Template	T_TFBot_Scout_Bonk
 				Attributes	AlwaysCrit
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 		WaveSpawn
@@ -760,6 +771,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					"lunchbox adds minicrits" 2
 					"airblast disabled"	1
 				}
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 		WaveSpawn
@@ -775,6 +791,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			{
 				Template	T_TFBot_Heavyweapons_Fist
 				Item	"der maschinensoldaten-helm"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.3
+				}
 			}
         }
         WaveSpawn
@@ -792,6 +814,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
                 Skill Normal
                 ClassIcon demo_lochload
                 Item "the loch-n-load"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
         }
         WaveSpawn
@@ -801,13 +828,17 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
             MaxActive 1
             SpawnCount 1
             WaitBeforeStarting 10
-            WaitBetweenSpawnsAfterDeath 6
+            WaitBetweenSpawns 6
 			Support 1
             TFBot
             {
                 Class Soldier
                 Skill Normal
-
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 	}
@@ -871,6 +902,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 						ItemName	"the flare gun"
 						"fire rate bonus"	0.2
 					}
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.1
+						"airblast vertical vulnerability multiplier"	0.1
+						"damage force reduction"	0.3
+					}
 				}
 				TFBot
 				{
@@ -883,6 +920,9 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					CharacterAttributes
 					{
 						"bot medic uber health threshold"	75 //The sinning tm
+						"airblast vulnerability multiplier"	0
+						"airblast vertical vulnerability multiplier"	0
+						"damage force reduction"	0.3
 					}
 				}
 			}
@@ -901,6 +941,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
             {
 				Template	T_TFBot_Heavyweapons_Fist
 				Item	"der maschinensoldaten-helm"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0
+					"airblast vertical vulnerability multiplier"	0
+					"damage force reduction"	0
+				}
 			}
 		}
 		WaveSpawn
@@ -938,6 +984,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Name "Direct Hit Soldier"
 				Skill Hard
 				Item "The Direct Hit"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.3
+				}
 			}
 		}
 		WaveSpawn
@@ -956,6 +1008,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Name	"Shotgun Heavy"
 				Skill	Normal
 				WeaponRestrictions	SecondaryOnly
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 		WaveSpawn
@@ -972,12 +1029,23 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Heavyweapons_Heavyweight_Champ_Fast
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.8
+				}
 				}
 				TFBot
 				{
 					Template	T_TFBot_Medic_BigHeal
 					Name	"Big Heal Medic"
 					Item	"the surgeon's stahlhelm"
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+					}
 				}
 			}
 		}
@@ -1018,9 +1086,9 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				CharacterAttributes
 				{
 					"move speed bonus"	0.5
-					"airblast vulnerability multiplier"	0.5
+					"airblast vulnerability multiplier"	0.0
 					"override footstep sound set"	6
-					"airblast vertical vulnerability multiplier"	0.5
+					"airblast vertical vulnerability multiplier"	0.0
 				}
 			}
 		}
@@ -1074,7 +1142,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					Template	T_TFBot_Giant_Medic_Regen
 					Name	"Giant Almost Regen Medic"
 					Item	"ghastly gibus"
-					Health	3000
+					Health	3500
 					Scale	1.55
 					Skill	Easy
 					CharacterAttributes
@@ -1102,6 +1170,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Name "Direct Hit Soldier"
 				Skill Hard
 				Item "The Direct Hit"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 	}
@@ -1158,6 +1231,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			{
 				Template	T_TFBot_Giant_Scout_Bonk //Yippee
 				Name	"Idiot Test"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0
+					"airblast vertical vulnerability multiplier"	0
+					"damage force reduction"	0
+				}
 			}
 		}
 		WaveSpawn
@@ -1175,10 +1254,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Item "pyroland_scattergun_shottohell"
 				ClassIcon	"scout_superbonk"
 				Attributes	"HoldFireUntilFullReload"
+				Attributes	"AlwaysCrit"
 				Item "Cadet Visor"
 				Name	"Idiot Test MK II"
 				AutoJumpMin 5
-				AutoJumpMax 6
+				AutoJumpMax 8
 				Skill Expert
 				ItemAttributes
 				{
@@ -1189,7 +1269,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				}
 				CharacterAttributes
 				{
-					"effect bar recharge rate increased" 0.39
+					"effect bar recharge rate increased" 0.35
 					"deploy time increased" 0.5
 					"move speed bonus" 1337
 					"increased jump height" 1.4
@@ -1230,8 +1310,8 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			{
 				"move speed bonus"	0.5
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.005
-				"airblast vertical vulnerability multiplier" 0.005
+				"airblast vulnerability multiplier" 0
+				"airblast vertical vulnerability multiplier" 0
 				"override footstep sound set" 6
 			}
 			}
@@ -1249,10 +1329,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			{
 				Template	T_TFBot_Sniper_Huntsman_Spammer
 				ClassIcon	sniper_bow_multi
-				ItemAttributes
+				CharacterAttributes
 				{
-					ItemName	"the huntsman"
-					"damage bonus" 0.5
+					"airblast vulnerability multiplier"	0
+					"airblast vertical vulnerability multiplier"	0
+					"damage force reduction"	0
 				}
 			}
 		}
@@ -1276,15 +1357,10 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 						ItemName "TF_WEAPON_FLAMETHROWER"
 						"airblast disabled" 1
 					}
-				}
-				TFBot
-				{
-					Class	Pyro
-					Skill	Normal
-					ItemAttributes
+					CharacterAttributes
 					{
-						ItemName "TF_WEAPON_FLAMETHROWER"
-						"airblast disabled" 1
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
 					}
 				}
 				TFBot
@@ -1295,6 +1371,26 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					{
 						ItemName "TF_WEAPON_FLAMETHROWER"
 						"airblast disabled" 1
+					}
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+					}
+				}
+				TFBot
+				{
+					Class	Pyro
+					Skill	Normal
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_FLAMETHROWER"
+						"airblast disabled" 1
+					}
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
 					}
 				}
 				TFBot
@@ -1303,6 +1399,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					Skill	Easy
 					Item	"ghastly gibus"
 					Attributes	AlwaysFireWeapon
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+					}
 				}
 			}
 		}
@@ -1319,6 +1420,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			{
 				Template	T_TFBot_Demo_Burst
 				Item		"scotch bonnet"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.2
+					"airblast vertical vulnerability multiplier"	0.2
+					"damage force reduction"	0.2
+				}
 			}
 		}
 		WaveSpawn
@@ -1335,8 +1442,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			    TFBot
 				{
 				    Template T_TFBot_Giant_Heavyweapons
-					Skill Normal
-					MaxVisionRange 800
+					MaxVisionRange 650
 				}
 				TFBot
 				{
@@ -1390,6 +1496,9 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				CharacterAttributes
 				{
 					"head scale" 0.4
+					"airblast vulnerability multiplier"	0
+					"airblast vertical vulnerability multiplier"	0
+					"damage force reduction"	0
 				}
 			}
 		}
@@ -1473,7 +1582,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			WaitForAllDead	W3-A4
 			Where spawnbot
 			TotalCount	1337
-			MaxActive	2
+			MaxActive	4
 			SpawnCount	2
 			WaitBeforeStarting	10
 			WaitBetweenSpawns	3
@@ -1486,6 +1595,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Name	"Bushwacka Sniper"
 				Skill	Expert
 				WeaponRestrictions	MeleeOnly
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 		WaveSpawn
@@ -1536,9 +1650,15 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Attributes	AlwaysCrit
 				Name	"Tribal Sniper"
 				WeaponRestrictions	MeleeOnly
-				Health	450
+				Health	650
 				Scale	1.3
 				Item "The Tribalman's Shiv"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.3
+				}
 			}
 		}
 	}
@@ -1606,7 +1726,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			WaitBeforeStarting	5
 			Tank
 			{
-				Health	12500
+				Health	13500
 				Name	tank1
 				Speed	75
 				StartingPathTrackNode tankpath_alt
@@ -1838,19 +1958,39 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					Class Scout
 					Skill Easy
 					WeaponRestrictions PrimaryOnly
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+					}
 				}
 				TFBot
 				{
 					Class Scout
 					Skill Easy
+				CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+					}
 				}
 				TFBot
 				{
 					Template T_TFBot_Scout_Bonk
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+					}
 				}
 				TFBot
 				{
 					Template T_TFBot_Scout_Sandman
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+					}
 				}
 			}
 		}
@@ -1898,6 +2038,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				WeaponRestrictions PrimaryOnly
 				Item "The Cow Mangler 5000"
 				Skill Expert
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+				}
 			}
 		}
 		WaveSpawn
@@ -1976,7 +2121,6 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					"fire rate bonus"	-1
 					"Projectile speed increased" 0.80
 					"faster reload rate"	0.85
-					"attach particle effect" 3042
 				}
 				ItemAttributes
 				{
@@ -2023,6 +2167,9 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				CharacterAttributes
 				{
 					"move speed bonus"	3
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.6
 				}
 			}
 		}
@@ -2050,10 +2197,16 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Attributes	AlwaysFireWeapon
 				ItemAttributes
 				{					
-				ItemName "sharpened volcano fragment"
-				"attach particle effect" 3042
-				"attack_minicrits_and_consumes_burning" 1
-				"damage penalty"	1
+					ItemName "sharpened volcano fragment"
+					"attach particle effect" 3042
+					"attack_minicrits_and_consumes_burning" 1
+					"damage penalty"	1
+				}
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.3
 				}
 			}
 		}
@@ -2132,11 +2285,14 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					}
 					CharacterAttributes
 					{
-						"move speed bonus" 0.4
+						"move speed bonus" 0.5
 						"dmg taken from bullets reduced" 0
 						"dmg taken from blast reduced" 0
 						"dmg taken from fire reduced" -1337
 						"hand scale" 1.4
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+						"damage force reduction"	0.3
 					}
 				}
 				TFBot
@@ -2231,6 +2387,9 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				CharacterAttributes
 				{
 					"voice pitch scale" 1.5
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.3
 				}
 			}
 		}
@@ -2283,6 +2442,9 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				CharacterAttributes
 				{
 					"torso scale" 1.75
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.3
 				}
 			}
 		}
@@ -2309,11 +2471,17 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				ItemAttributes
 				{
 					ItemName	"tf_weapon_grenadelauncher"
-					"dmg penalty vs players" 0.3
+					"dmg penalty vs players" 0.6
 					"blast radius increased"	0.1
 					"custom projectile model"	"models/weapons/w_models/w_baseball.mdl"
 					"fuse bonus"	42069
 					"blast dmg to self increased"	0
+				}
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0
+					"airblast vertical vulnerability multiplier"	0
+					"damage force reduction"	0
 				}
 			}
 		}
@@ -2329,7 +2497,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			TFBot
 			{
 				ClassIcon	scout_stun_armored
-				Health	250
+				Health	450
 				Name	"Centrist League Scout"
 				Scale	1.22
 				Class	Scout
@@ -2386,7 +2554,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					}
 					CharacterAttributes
 					{
-						"move speed bonus"	0.4
+						"move speed bonus"	0.6
 						"damage force reduction"	0.1
 						"airblast vulnerability multiplier"	0.1
 						"override footstep sound set"	5
@@ -2415,14 +2583,11 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				{
 					Template	T_TFBot_Heavy_IronFist_Airblast
 					ClassIcon	heavy_steelfist_pusher
-				}
-				TFBot
-				{
-					Class Spy
-					Skill Hard
 					CharacterAttributes
 					{
-						"cannot disguise" 1
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+						"damage force reduction"	0.3
 					}
 				}
 				TFBot
@@ -2432,6 +2597,21 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					CharacterAttributes
 					{
 						"cannot disguise" 1
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.3
+					}
+				}
+				TFBot
+				{
+					Class Spy
+					Skill Hard
+					CharacterAttributes
+					{
+						"cannot disguise" 1
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+						"damage force reduction"	0.3
 					}
 				}
 			}
@@ -2515,31 +2695,56 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					}
 					CharacterAttributes
 					{
-						"move speed bonus"	0.45
+						"rage giving scale"	0
+						"move speed bonus"	0.5
 						"damage force reduction"	0
 						"airblast vulnerability multiplier"	0
 						"airblast vertical vulnerability multiplier"	0
 						"heal rate bonus" 42069
-						"bot medic uber deploy delay duration"	10
-						"uber duration bonus"	 -4
 						"hand scale" 1.85
+						"increased jump height" 3.25
+						"cancel falling damage" 1
 					}
 				}
 				TFBot
 				{
 					Template	T_TFBot_Gas_Monkey //Do you think people would get pissed off over the ACTUAL name of these things?
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+						"damage force reduction"	0.3
+					}
 				}
 				TFBot
 				{
 					Template	T_TFBot_Gas_Monkey //Surely not
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+						"damage force reduction"	0.3
+					}
 				}
 				TFBot
 				{
 					Template	T_TFBot_Gas_Monkey //Would be almost a non-crime, given that VV randoms got pissed off for Object Overflows gas templates
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+						"damage force reduction"	0.3
+					}
 				}
 				TFBot
 				{
 					Template	T_TFBot_Gas_Monkey //It really couldn't be more over if it were the case.
+					CharacterAttributes
+					{
+						"airblast vulnerability multiplier"	0.3
+						"airblast vertical vulnerability multiplier"	0.3
+						"damage force reduction"	0.3
+					}
 				}
 			}
 		}
@@ -2563,6 +2768,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				WeaponRestrictions	MeleeOnly
 				Item	"The Half-Zatoichi"
 				Item	"Soldier Samurai Hat"
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.5
+				}
 			}
 		}
 	}
@@ -2643,6 +2854,12 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					"hit self on miss" 0
 					"ragdolls plasma effect"	1
 				}
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.8
+				}
 			}
 		}
 		WaveSpawn
@@ -2668,6 +2885,9 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				CharacterAttributes
 				{
 					"ragdolls plasma effect"	1
+					"airblast vulnerability multiplier"	0.3
+					"airblast vertical vulnerability multiplier"	0.3
+					"damage force reduction"	0.8
 				}
 			}
 		}
@@ -2739,7 +2959,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			MaxActive 1
 			SpawnCount 1
 			WaitBeforeStarting 0
-			WaitBetweenSpawnsAfterDeath	15
+			WaitBetweenSpawnsAfterDeath	7
 			TotalCurrency 0
 			Support	1
 			TFBot
@@ -2805,7 +3025,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 			Tank
 			{
 				Health	3000 //odd idk
-				Speed	90
+				Speed	100
 				Name "tankboss"
 				StartingPathTrackNode tankpath_alt
 				OnKilledOutput
@@ -2823,7 +3043,6 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 	}
 	Wave
 	{
-		Sound "music/Half-Life12.mp3"	
 		StartWaveOutput
 		{
 			Target	wave_start_relay
@@ -2880,6 +3099,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Template	T_TFBot_Giant_Soldier_Laser_Wall
 				Item	"The B.A.S.E. Jumper"
 				Attributes	"UseBossHealthBar"
+				Attributes	"AlwaysCrit"
 				Attributes	"Parachute"
 				Name	"The Mother of All Laser Walls"
 				Scale	1.9
@@ -2894,7 +3114,6 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 					"airblast vertical vulnerability multiplier"	0
 					"rage giving scale"	0.5
 					"increased jump height" 3.2069
-					"damage bonus vs buildings"	1.42069
 					"hand scale"	1.69
 				}
 			}
@@ -2958,6 +3177,22 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 				Health	200
 				Name	"A Really Annoying Heavy"
 				Item	"pestering jester"
+			}
+		}
+		WaveSpawn
+		{
+			TotalCurrency	0
+			TotalCount	1337
+			MaxActive	2
+			SpawnCount	2
+			WaitBeforeStarting	30
+			Support	1
+			Where	spawnbot
+			TFBot
+			{
+				Template	T_TFBot_Medic_BigHeal
+				Item	"the surgeon's stahlhelm"
+				Name	"Big Heal Medic"
 			}
 		}
 		WaveSpawn
