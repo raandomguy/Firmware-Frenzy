@@ -303,6 +303,21 @@ WaveSchedule
 				"fire rate penalty" 1.2
 			}
 		}
+		T_TFBot_Engineer_Teleporter_Default
+        {
+            Class Engineer
+            Name "Teleporter Engineer"
+            ClassIcon engineer_telein
+            Skill Expert
+            Health 300
+			TeleportWhere	spawnbot_flank
+			TeleportWhere	spawnbot_mission_sniper
+			Item     "Golden Wrench"
+            Item     "The Data Mining Light"
+            Item     "The Texas Half-Pants"
+            Item     "Merc's Pride Scarf"
+			Attributes	"IgnoreFlag"
+		}
     }
 	
 	Mission	//	sentrybusters
@@ -490,7 +505,7 @@ WaveSchedule
 		RunForThisManyWaves 1
 		InitialCooldown 16
 		CooldownTime 20
-		DesiredCount 1
+		DesiredCount 2
 		TFBot
 		{
 			Class Sniper
@@ -1652,7 +1667,7 @@ WaveSchedule
 			TotalCount	20
 			MaxActive	7
 			SpawnCount	1
-			WaitBetweenSpawns	1
+			WaitBetweenSpawns	2
 			WaitForAllDead	w4b
 			Where	spawnbot_flank
 			Support	limited
@@ -2031,6 +2046,7 @@ WaveSchedule
                 Action Trigger
             }
 		}
+		
 		WaveSpawn
 		{
 			Name	w6boss
@@ -2114,11 +2130,13 @@ WaveSchedule
 			TFBot
 			{
 				Template    T_TFBot_Engineer_Sentry_Tele_Battle
-				ClassIcon engineer_telein
-				Item 		"Golden Wrench"
-				Item 		"The Data Mining Light"
-				Item 		"The Texas Half-Pants"
-				Item 		"Merc's Pride Scarf"
+				ClassIcon	engineer_telein
+				TeleportWhere	spawnbot_flank
+				TeleportWhere	spawnbot_mission_sniper
+				Item 	"Golden Wrench"
+				Item 	"The Data Mining Light"
+				Item 	"The Texas Half-Pants"
+				Item 	"Merc's Pride Scarf"
 			}
 		}
 		
@@ -2130,13 +2148,13 @@ WaveSchedule
 			TotalCount	12
 			MaxActive	9
 			SpawnCount	3
-			WaitBetweenSpawns	15
+			WaitBetweenSpawns	16
 			Where	spawnbot
 			Squad
 			{
 				TFBot
 				{
-					Template	T_TFBot_Giant_Heavyweapons_Deflector
+					Template	T_TFBot_Giant_Heavyweapons
 					Item		"Legendary Lid"
 					Item 		"EOTL_Ursa Major"
 					Item 		"The Mann of the House"
@@ -2236,7 +2254,7 @@ WaveSchedule
 			SpawnCount	2
 			WaitBetweenSpawns	4
 			Where	spawnbot_mission_sniper
-			Support	limited
+			Support	1
 			TFBot
 			{
 				Template T_TFBot_Force_Pyro_Magic_Pyro
@@ -2247,11 +2265,12 @@ WaveSchedule
 		{
 			Name	bigrock1
 			TotalCurrency	100
-			WaitForAllSpawned	w6b
+			WaitForAllSpawned	w6a
+			WaitBeforeStarting	55
 			TotalCount	4
 			MaxActive	4
 			SpawnCount	2
-			WaitBetweenSpawns	15
+			WaitBetweenSpawns	18
 			Where	spawnbot
 			Squad
 			{
@@ -2266,9 +2285,10 @@ WaveSchedule
 				}
 				TFBot
 				{
-					Template	T_TFBot_Medic_QuickUber
+					Template	T_TFBot_Medic_SlowRecharge
 					Item 		"Point and Shoot"
-                    Name        "Mage Quick Healer"
+					Item		"The Chronoscarf" 
+                    Name        "Mage Uber"
                     CharacterAttributes
                     {
                         "hand scale" 0
