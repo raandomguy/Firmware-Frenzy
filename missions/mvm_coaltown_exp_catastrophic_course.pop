@@ -1090,7 +1090,7 @@ WaveSchedule
 			Name "cataclysm soldiers"
 			WaitForAllSpawned "demos"
 
-			TotalCount 26
+			TotalCount 16
 			MaxActive 8
 			SpawnCount 4
 			WaitBeforeStarting 0
