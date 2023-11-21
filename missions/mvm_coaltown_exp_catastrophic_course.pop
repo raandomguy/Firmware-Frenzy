@@ -627,7 +627,7 @@ WaveSchedule
 			MaxActive 10
 			SpawnCount 2
 			WaitBetweenSpawns 1.2
-			WaitBeforeStarting 3.5
+			WaitBeforeStarting 5.5
 			TotalCurrency 150		
 			
 
