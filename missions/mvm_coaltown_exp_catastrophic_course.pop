@@ -623,11 +623,11 @@ WaveSchedule
 			
 			Where spawnbot
 			WaitForAllSpawned "wave2flares"
-			TotalCount 36
+			TotalCount 46
 			MaxActive 10
 			SpawnCount 2
-			WaitBetweenSpawns 1.5
-			WaitBeforeStarting 10
+			WaitBetweenSpawns 1.2
+			WaitBeforeStarting 3.5
 			TotalCurrency 150		
 			
 
@@ -1008,7 +1008,7 @@ WaveSchedule
 		{
 			
 			Name "support jumpers"
-			WaitForAllSpawned "cpu soldiers"
+			WaitForAllSpawned "demos"
 			Where spawnbot_giant
 			TotalCount 200
 			MaxActive 4
