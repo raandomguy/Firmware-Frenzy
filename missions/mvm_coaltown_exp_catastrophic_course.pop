@@ -1037,7 +1037,7 @@ WaveSchedule
 		{
 			Where spawnbot_giant
 			Name "burst"
-			WaitForAllSpawned "knights"
+			WaitForAllDead "knights"
 			TotalCount 4
 			MaxActive 4
 			SpawnCount 1
