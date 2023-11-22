@@ -75,9 +75,9 @@ __CollectGameEventCallbacks(this)
 ////////////////////////////////////////////////////////////////
 
 // CHANGE THESE //
-::phase2health <- 40000
-::phase3health <- 18000
-::bossrange <- 450
+::phase2health <- 47500
+::phase3health <- 20000
+::bossrange <- 430
 
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
@@ -147,7 +147,7 @@ __CollectGameEventCallbacks(this)
 				local wpn = GiveWeapon(self,"tf_weapon_rocketlauncher",18)
 				wpn.AddAttribute("faster reload rate",-0.8,-1)
 				wpn.AddAttribute("damage bonus",1.1,-1)
-				wpn.AddAttribute("fire rate bonus",0.5,-1)
+				wpn.AddAttribute("fire rate bonus",0.45,-1)
 				wpn.AddAttribute("fire rate bonus with reduced health",0.5,-1)
 				wpn.AddAttribute("killstreak tier",2,-1)
 				wpn.AddAttribute("killstreak idleeffect",6,-1)
