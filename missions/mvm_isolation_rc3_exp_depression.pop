@@ -6,7 +6,7 @@
 
 WaveSchedule
 {
-    StartingCurrency 1300
+    StartingCurrency 1000
 	CanBotsAttackWhileInSpawnRoom no
 	RespawnWaveTime 10
     Advanced 1
@@ -61,6 +61,80 @@ WaveSchedule
                 "voice pitch scale" 0.75
             }
         }
+		T_TFBot_Giant_Soldier_Barrage_DirectHit
+		{
+			Class Soldier
+			Name "Colonel Assault"
+			ClassIcon soldier_barrage
+			Skill Expert
+			Health 4000
+
+			Tag bot_giant
+
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss
+			Attributes HoldFireUntilFullReload
+
+			Item "The Direct Hit"
+			Item "Full Metal Helmet"
+			Item "Stealth Bomber"
+
+			ItemAttributes
+			{
+				ItemName "The Direct Hit"
+				"clip size upgrade atomic" 26.0
+				"faster reload rate" 0.22
+				"fire rate bonus" 0.2
+				"damage bonus" 1.875
+				"projectile spread angle penalty" 5
+				"Projectile speed increased" 0.67
+			}
+
+			CharacterAttributes
+			{
+				"health regen"	40
+				"move speed bonus"	0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+				"airblast vertical vulnerability multiplier" 0.1
+			}
+		}
+		T_TFBot_Giant_Pyro_Phlog_LongRange
+		{
+			Class Pyro
+			Name "Phlogistinator Patriarch"
+			ClassIcon pyro_ranged
+			Skill Expert
+			Health 3000
+
+			WeaponRestrictions PrimaryOnly
+            MaxVisionRange 1600
+			Attributes MiniBoss
+            Attributes SpawnWithFullCharge
+
+            Item "The Phlogistinator"
+            Item "Big Steel Jaw of Summer Fun"
+            Item "The Eliminators Safeguard"
+
+            ItemAttributes
+            {
+                ItemName "The Phlogistinator"
+                "damage bonus" 1.5
+                "increase buff duration" 3.5
+                "flame_speed" 3300
+                "flame_drag" 1.25
+            }
+
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                "voice pitch scale" 0.75
+				"damage force reduction" 0.6
+				"airblast vulnerability multiplier" 0.6
+				"override footstep sound set" 6
+			}
+		}
         T_TFBot_Giant_Pyro_Gas_EOI
         {
 			Class Pyro
@@ -428,14 +502,14 @@ WaveSchedule
         BeginAtWave 5
         RunForThisManyWaves 1
 
-        Where spawnbot_house
+        Where spawnbot_giant_house
 
         InitialCooldown 35
         CooldownTime 45
-        DesiredCount 3
+        DesiredCount 1
         TFBot
         {
-            Template T_TFBot_Sniper
+            Template T_TFBot_Giant_Pyro_Phlog_LongRange
         }
     }
 
@@ -799,6 +873,41 @@ WaveSchedule
 
         WaveSpawn
         {
+            Template T_WaveSpawn_EngiHints_Adder
+        }
+
+        WaveSpawn
+        {
+            TotalCount 6
+            MaxActive 1
+            SpawnCount 1
+
+            Where spawnbot_house
+
+            Support Limited
+
+            WaitBeforeStarting 5
+            WaitBetweenSpawnsAfterDeath 40
+            TFBot
+            {
+		    	Template T_TFBot_Engineer_Sentry_Tele_Battle
+		    	ClassIcon engineer_telein
+                Health "350"
+                TeleportWhere spawnbot_giant
+                TeleportWhere spawnbot_giant_house
+                TeleportWhere spawnbot_house
+                
+                Item "Cargo Constructor"
+
+                CharacterAttributes
+                {
+                    "cannot pick up intelligence" 1
+                }
+            }
+        }
+
+        WaveSpawn
+        {
             Name "wave01"
             TotalCount 8
             MaxActive 8
@@ -1031,6 +1140,7 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Giant_Sniper_SMG
+                Skill Expert
                 Maxvisionrange 1200
             }
         }
@@ -1047,7 +1157,27 @@ WaveSchedule
             
             WaitBeforeStarting 90
             WaitBetweenSpawns 10
-            TotalCurrency 100
+            TotalCurrency 50
+            TFBot
+            {
+                Template T_TFBot_Sniper_Piss
+            }
+        }
+
+        WaveSpawn
+        {
+            TotalCount 24
+            MaxActive 6
+            SpawnCount 2
+
+            Where spawnbot_house
+
+            Support 1
+            
+            WaitBeforeStarting 5
+            WaitBetweenSpawns 3
+            WaitForAllSpawned "wave02"
+            TotalCurrency 50
             TFBot
             {
                 Template T_TFBot_Sniper_Piss
@@ -1119,7 +1249,7 @@ WaveSchedule
     // 1 Tank
     // 36 Scouts (Hard AI)
 
-    // 8 Giant Rapid Fire Demomen
+    // 12 Giant Rapid Fire Demomen
     // 32 Heavies (Easy AI)
 
     // 4 Giant Scouts
@@ -1206,12 +1336,12 @@ WaveSchedule
         {
             Name "wave02"
             TotalCount 8
-            MaxActive 3
+            MaxActive 4
             SpawnCount 1
 
             Where spawnbot_giant_house
 
-            WaitBeforeStarting 40
+            WaitBeforeStarting 30
             WaitBetweenSpawns 10
             TotalCurrency 100
             TFBot
@@ -1230,13 +1360,13 @@ WaveSchedule
 
             Where spawnbot_giant_house
 
-            WaitBeforeStarting 30
+            WaitBeforeStarting 20
             WaitBetweenSpawns 10
             TotalCurrency 100
             TFBot
             {
                 Class Heavy
-                Skill Easy
+                Skill Normal
 
                 Maxvisionrange 1000
             }
@@ -1251,7 +1381,7 @@ WaveSchedule
 
             Where spawnbot_giant 
 
-            WaitBeforeStarting 120
+            WaitBeforeStarting 100
             TotalCurrency 100
             TFBot
             {
@@ -1271,7 +1401,7 @@ WaveSchedule
 
             Where spawnbot_giant_house
 
-            WaitBeforeStarting 140
+            WaitBeforeStarting 120
             WaitBetweenSpawns 12
             TotalCurrency 150
             Squad
@@ -1347,10 +1477,10 @@ WaveSchedule
     // Anti-Bionic
     // 8 Airblast Pyros & 1 Quickuber Medic each
 
-    // 4 Gas Bombers
+    // 5 Gas Bombers
+    // 4 Colonel Assaults & 2 Quickuber Medics each
     // 12 Buff Soldiers & 1 Quickuber Medic Each
-    // 33 Scouts (Normal AI, no visionrange)
-    // 24 Soldiers & Bonk Scatter Scouts (RandomChoice)
+    // 48 Scouts (Normal AI, no visionrange)
 
     // 2 Giant Heavies with 1 Giant Medic
 
@@ -1529,15 +1659,15 @@ WaveSchedule
         WaveSpawn
         {
             //Name "wave02"
-            TotalCount 33
-            MaxActive 9
-            SpawnCount 3
+            TotalCount 48
+            MaxActive 10
+            SpawnCount 2
 
             Where spawnbot
 
             WaitForAllDead "wave01"
             WaitBeforeStarting 4
-            WaitBetweenSpawns 5
+            WaitBetweenSpawns 3
             TotalCurrency 200
             TFBot
             {
@@ -1552,31 +1682,30 @@ WaveSchedule
         WaveSpawn
         {
             Name "wave02"
-            TotalCount 36
-            MaxActive 10
-            SpawnCount 2
+            TotalCount 12
+            MaxActive 9
+            SpawnCount 3
 
             Where spawnbot_house
 
             WaitForAllDead "wave01"
-            WaitBeforeStarting 16
-            WaitBetweenSpawns 3
+            WaitBeforeStarting 5
+            WaitBetweenSpawns 15
             TotalCurrency 100
-            RandomChoice
+            Squad
             {
                 TFBot
                 {
-                    Class Soldier
-                    Skill Hard
+                    Template T_TFBot_Giant_Soldier_Barrage_DirectHit
+                    MaxVisionRange 1500
                 }
                 TFBot
                 {
-                    Template T_TFBot_Scout_Bonk
-                    Name "Bonk Scout"
-
-                    WeaponRestrictions PrimaryOnly
-                    MaxVisionRange 1000
-                    Attributes HoldFireUntilFullReload
+                    Template T_TFBot_Medic_QuickUber
+                }
+                TFBot
+                {
+                    Template T_TFBot_Medic_QuickUber
                 }
             }
         }
@@ -1669,6 +1798,8 @@ WaveSchedule
 
     // 2 Tanks (Varied HP)
     // 4 Giant Deflector Heavies & 1 Gas Bomber each
+
+    // Support : Steel Gauntlet (Critboosted)
 
     Wave
     {
@@ -1945,7 +2076,7 @@ WaveSchedule
             WaitForAllSpawned "wave03"
             WaitBeforeStarting 20
             WaitBetweenSpawns 13
-            TotalCurrency 400
+            TotalCurrency 200
             Squad
             {
                 TFBot
@@ -1956,6 +2087,28 @@ WaveSchedule
                 {
                     Template T_TFBot_Giant_Pyro_Gas_EOI
                 }
+            }
+        }
+
+        WaveSpawn
+        {
+            Name "Support"
+            TotalCount 45
+            MaxActive 10
+            SpawnCount 5
+
+            Where spawnbot_giant_house
+
+            Support 1
+
+            WaitForAllDead "wave03"
+            WaitBetweenSpawns 15
+            TotalCurrency 200
+            TFBot
+            {
+                Template T_TFBot_Heavy_IronFist_Airblast
+                ClassIcon heavy_steelfist_pusher
+                Attributes AlwaysCrit
             }
         }
     }
