@@ -781,7 +781,8 @@ There_Was_Nothing_There
 		WaveSpawn
 		{
 			Name 1ba
-			Where spawnbot_giant
+			Where spawnbot_flank_right
+			Where spawnbot_flank_left
 			TotalCurrency 100
 			TotalCount 2
 			SpawnCount 1
@@ -825,7 +826,7 @@ There_Was_Nothing_There
 			Name 1bc
 			WaitForAllDead 1ab
 			Where spawnbot_flank_right
-			where spawnbot_flank_left
+			Where spawnbot_flank_left
 			TotalCurrency 125
 			TotalCount 12
 			SpawnCount 2
@@ -889,7 +890,8 @@ There_Was_Nothing_There
 		WaveSpawn
 		{
 			Name 2aa
-			Where spawnbot
+			Where spawnbot_flank_left
+			Where spawnbot_flank_right
 			TotalCurrency 25
 			TotalCount 1
 			SpawnCount 1
@@ -989,7 +991,6 @@ There_Was_Nothing_There
 		{
 			Name 2ba
 			WaitForAllSpawned 2aa
-			Where spawnbot_flank_left
 			Where spawnbot_flank_right
 			TotalCurrency 100
 			TotalCount 2
@@ -1031,7 +1032,6 @@ There_Was_Nothing_There
 			Name 2ba
 			WaitForAllSpawned 2aa
 			Where spawnbot_flank_left
-			Where spawnbot_flank_right
 			TotalCurrency 100
 			TotalCount 4
 			SpawnCount 2
@@ -1054,7 +1054,8 @@ There_Was_Nothing_There
 		{
 			Name 2ca
 			WaitForAllSpawned 2ba
-			Where spawnbot_giant
+			Where spawnbot_flank_left
+			Where spawnbot_flank_right
 			TotalCurrency 275
 			TotalCount 6
 			SpawnCount 3
@@ -1309,7 +1310,7 @@ There_Was_Nothing_There
 		{
 			Name 3ca
 			WaitForAllSpawned 3tank2
-			Where spawnbot_giant
+			Where spawnbot_flank_right
 			TotalCurrency 150
 			TotalCount 6
 			SpawnCount 2
@@ -1349,7 +1350,7 @@ There_Was_Nothing_There
 		{
 			Name 3ca
 			WaitForAllSpawned 3tank2
-			Where spawnbot_giant
+			Where spawnbot_flank_left
 			TotalCurrency 150
 			TotalCount 6
 			SpawnCount 2
@@ -1433,7 +1434,8 @@ There_Was_Nothing_There
 		WaveSpawn
 		{
 			Name 4aa
-			Where spawnbot_giant
+			Where spawnbot_flank_left
+			Where spawnbot_flank_right
 			TotalCurrency 150
 			TotalCount 6
 			SpawnCount 1
@@ -1604,7 +1606,8 @@ There_Was_Nothing_There
 		{
 			Name 4cb
 			WaitForAllDead 4bc
-			Where spawnbot_giant
+			Where spawnbot_flank_left
+			Where spawnbot_flank_right
 			TotalCurrency 100
 			TotalCount 6
 			SpawnCount 2
@@ -1701,7 +1704,8 @@ There_Was_Nothing_There
 		WaveSpawn
 		{
 			Name 5boss1
-			Where spawnbot_giant
+			Where spawnbot_flank_left
+			Where spawnbot_flank_right
 			TotalCurrency 0
 			TotalCount 1
 			SpawnCount 1
@@ -1987,7 +1991,8 @@ There_Was_Nothing_There
 		{
 			Name 5ca
 			WaitForAllDead 5bb
-			Where spawnbot_giant
+			Where spawnbot_flank_left
+			Where spawnbot_flank_right
 			TotalCurrency 100
 			TotalCount 6
 			SpawnCount 2
@@ -2087,7 +2092,8 @@ There_Was_Nothing_There
 		WaveSpawn
 		{
 			Name 6aa
-			Where spawnbot
+			Where spawnbot_flank_left
+			Where spawnbot_flank_right
 			TotalCurrency 100
 			TotalCount 4
 			SpawnCount 1
@@ -2438,7 +2444,7 @@ There_Was_Nothing_There
 		Wavespawn //And the many shells cried out one word, "Manager".
 		{
 			Name Nemesis
-			Where spawnbot
+			Where spawnbot_flank_left
 			TotalCount 1
 			MaxActive 1
 			Spawncount 1
@@ -2469,7 +2475,7 @@ There_Was_Nothing_There
 								"override footstep sound set" 2
 								
 								"move speed bonus"	0.4
-								"dmg taken increased" 0.5
+								"dmg taken increased" 0.25
 								"deploy time decreased" 0.01
 								"damage force reduction" 0.01
 								"airblast vulnerability multiplier" 0.01
@@ -2577,12 +2583,12 @@ There_Was_Nothing_There
 		WaveSpawn
 		{
 			Name Justitia
-			Where spawnbot
+			Where spawnbot_flank_left
 			RandomSpawn 1
 			TotalCurrency 0
-			TotalCount 5
-			SpawnCount 5
-			MaxActive 5
+			TotalCount 7
+			SpawnCount 7
+			MaxActive 7
 			Support Limited
 			WaitBeforeStarting 0
 			WaitBetweenSpawns 20
