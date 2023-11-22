@@ -75,7 +75,7 @@ __CollectGameEventCallbacks(this)
 ////////////////////////////////////////////////////////////////
 
 // CHANGE THESE //
-::phase2health <- 47500
+::phase2health <- 42500
 ::phase3health <- 20000
 ::bossrange <- 430
 
