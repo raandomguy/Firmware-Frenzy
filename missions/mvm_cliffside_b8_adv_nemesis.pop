@@ -2493,7 +2493,7 @@ There_Was_Nothing_There
 							{
 								"override footstep sound set" 2
 
-								"move speed bonus"	0.5
+								"move speed bonus"	0.52
 								"deploy time decreased" 0.01
 								"damage force reduction" 0.01
 								"airblast vulnerability multiplier" 0.01
@@ -2530,10 +2530,10 @@ There_Was_Nothing_There
 							Skill Expert
 							CharacterAttributes
 							{
-								"move speed bonus"	0.45
+								"move speed bonus"	0.5
 								"health regen" 200
 								"override footstep sound set" 3
-								"Projectile speed increased" 0.75
+								"Projectile speed increased" 0.65
 								"deploy time decreased" 0.01
 								"damage force reduction" 0.01
 								"airblast vulnerability multiplier" 0.01
@@ -2565,7 +2565,7 @@ There_Was_Nothing_There
 							}
 							CharacterAttributes
 							{
-								"move speed bonus"	0.45
+								"move speed bonus"	0.5
 								"override footstep sound set" 3
 								"damage force reduction" 0.01
 								"airblast vulnerability multiplier" 0.01
