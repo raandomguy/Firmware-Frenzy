@@ -2078,6 +2078,7 @@ WaveSchedule
 				}
 				CharacterAttributes
 				{
+					"backstab shield" 1
 					"attach particle effect" 74
 					"move speed bonus"	0.5
 					"damage force reduction"	0.001
