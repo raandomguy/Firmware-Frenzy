@@ -3153,7 +3153,7 @@ You_Can_Put_Anything_Here_Lol // WaveSchedule
 		}
 		WaveSpawn
 		{
-			TotalCurrency	1337
+			TotalCurrency	0
 			TotalCount	1
 			MaxActive	1
 			SpawnCount	1
