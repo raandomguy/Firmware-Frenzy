@@ -112,6 +112,7 @@ WaveSchedule
             MaxVisionRange 1600
 			Attributes MiniBoss
             Attributes SpawnWithFullCharge
+            Attributes AlwaysFireWeapon
 
             Item "The Phlogistinator"
             Item "Big Steel Jaw of Summer Fun"
