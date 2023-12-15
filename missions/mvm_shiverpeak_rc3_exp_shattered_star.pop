@@ -1480,31 +1480,38 @@ WaveSchedule
 		{
 			Name	pyro_support
 			TotalCount	69
-			MaxActive	1
-			SpawnCount	1
+			MaxActive	2
+			SpawnCount	2
 			WaitBetweenSpawnsAfterDeath	10
 			Where	spawnbot_mission_sniper
 			Support	1
-			TFBot
+			Squad
 			{
-				Class		Pyro
-				Skill		Expert
-				Name		Trolley
-				ClassIcon	pyro_reflect_daan
-				Item		"honest halo"
-				Item		"sight for sore eyes"
-				Item		"pyroland_flamethrower_balloonicorn"
+				TFBot
+				{
+					Class		Pyro
+					Skill		Expert
+					Name		Trolley
+					ClassIcon	pyro_reflect_daan
+					Item		"honest halo"
+					Item		"sight for sore eyes"
+					Item		"pyroland_flamethrower_balloonicorn"
+				}
+				TFBot
+				{
+				Template	T_TFBot_Medic_BigHeal
+				}
 			}
 		}
 		
 		WaveSpawn
 		{
 			Name	w4a
-			TotalCount	6
+			TotalCount	9
 			TotalCurrency	200
-			MaxActive	5
-			SpawnCount	2
-			WaitBetweenSpawns	14
+			MaxActive	7
+			SpawnCount	3
+			WaitBetweenSpawns	16
 			WaitBeforeStarting	1
 			Where	spawnbot
 			Squad
@@ -1527,6 +1534,17 @@ WaveSchedule
                         "hand scale" 0
                     }
 				}
+				TFBot
+				{
+					Template	T_TFBot_Medic_SlowRecharge
+					Item 		"Point and Shoot"
+					Item		"The Chronoscarf" 
+                    Name        "Mage Uber"
+                    CharacterAttributes
+                    {
+                        "hand scale" 0
+                    }
+				}
 			}
 		}
 		
@@ -1535,15 +1553,15 @@ WaveSchedule
 			Name	w4a
 			TotalCurrency	50
 			TotalCount	30
-			MaxActive	6
-			SpawnCount	1
-			WaitBetweenSpawns	2
+			MaxActive	8
+			SpawnCount	2
+			WaitBetweenSpawns	3
 			Where	spawnbot_flank
 			Where	spawnbot_mission_sniper
 			TFBot
 			{
 				Class		Demoman
-				Skill		Hard
+				Skill		Expert
 				Health		175
 				ClassIcon	demo
 				Name		"Bomberman"
@@ -1623,7 +1641,7 @@ WaveSchedule
 			Name	w4c
 			TotalCurrency	150
 			TotalCount	9
-			MaxActive	8
+			MaxActive	9
 			SpawnCount	3
 			WaitBetweenSpawns	15
 			WaitForAllSpawned	w4gscout
@@ -1664,13 +1682,14 @@ WaveSchedule
 		{
 			Name	w4c
 			TotalCurrency	50
-			TotalCount	20
+			TotalCount	25
 			MaxActive	7
 			SpawnCount	1
 			WaitBetweenSpawns	2
-			WaitForAllDead	w4b
+			WaitForAllSpawned	w4b
+			WaitBeforeStarting	5
 			Where	spawnbot_flank
-			Support	limited
+			Support	1
 			TFBot
 			{
 				Template	T_TFBot_Soldier_RapidFire
@@ -1858,9 +1877,7 @@ WaveSchedule
 			{
 				TFBot
 				{
-					Template	T_TFBot_Giant_Pyro_DragonsFury
-					Item		"The Flame Warrior"
-					Name		"Giant Dragon Warrior"
+					Template	T_TFBot_Force_Giant_Pyro_Magic
 				}
 				TFBot
 				{
@@ -2072,13 +2089,12 @@ WaveSchedule
 				ItemAttributes
 				{
 					ItemName	tf_weapon_rocketlauncher
-					"faster reload rate" 0.3
+					"faster reload rate" 0.1
 					"fire rate bonus" -1
-					"clip size upgrade atomic" -2
+					"clip size upgrade atomic" -1
 				}
 				CharacterAttributes
 				{
-					"backstab shield" 1
 					"attach particle effect" 74
 					"move speed bonus"	0.5
 					"damage force reduction"	0.001
@@ -2098,7 +2114,7 @@ WaveSchedule
             TotalCount 1
             MaxActive 1
             SpawnCount 1
-            WaitBeforeStarting 18
+            WaitBeforeStarting 15
             WaitBetweenSpawns 0
             TotalCurrency 100
         
@@ -2106,7 +2122,7 @@ WaveSchedule
             {
                 Name "tankboss"
                 StartingPathTrackNode "boss_path_1"
-                Health 33000
+                Health 35000
                 Speed 75
                 Skin 0
                 OnBombDroppedOutput
@@ -2120,7 +2136,7 @@ WaveSchedule
 		WaveSpawn
 		{
 			Name	w6silly
-			WaitBeforeStarting	50
+			WaitBeforeStarting	40
 			TotalCount	69
 			MaxActive	1
 			SpawnCount	1
@@ -2144,7 +2160,7 @@ WaveSchedule
 		{
 			Name	w6a
 			TotalCurrency	100
-			WaitBeforeStarting	40
+			WaitBeforeStarting	35
 			TotalCount	12
 			MaxActive	9
 			SpawnCount	3
@@ -2187,7 +2203,7 @@ WaveSchedule
 		{
 			Name	w6common1
 			TotalCurrency	50
-			WaitBeforeStarting	40
+			WaitBeforeStarting	35
 			TotalCount	25
 			MaxActive	7
 			SpawnCount	2
@@ -2214,7 +2230,7 @@ WaveSchedule
             {
                 Name "tankboss"
                 StartingPathTrackNode "boss_path_1"
-                Health 27000
+                Health 30000
                 Speed 75
                 Skin 1
                 OnBombDroppedOutput
@@ -2239,8 +2255,19 @@ WaveSchedule
 			TFBot
 			{
 				Template	T_TFBot_Giant_Scout_Fast
-				Item 		"Bonk Boy"
-				Item 		"Unarmed Combat"
+				Name 	"Super Swordsman"
+				Item	"Three-Rune Blade"
+				Item	"The Dark Falkirk Helm"
+				ItemAttributes
+				{
+					ItemName	"Three-Rune Blade"
+					"hit self on miss"	0
+				}
+				CharacterAttributes
+				{
+					"override footstep sound set" 7
+					"hand scale" 1.5
+				}
 			}
 		}
 		
@@ -2258,6 +2285,7 @@ WaveSchedule
 			TFBot
 			{
 				Template T_TFBot_Force_Pyro_Magic_Pyro
+				Skill	Expert
 			}
 		}
 		
@@ -2266,11 +2294,11 @@ WaveSchedule
 			Name	bigrock1
 			TotalCurrency	100
 			WaitForAllSpawned	w6a
-			WaitBeforeStarting	55
+			WaitBeforeStarting	60
 			TotalCount	4
 			MaxActive	4
 			SpawnCount	2
-			WaitBetweenSpawns	18
+			WaitBetweenSpawns	17
 			Where	spawnbot
 			Squad
 			{
@@ -2278,7 +2306,7 @@ WaveSchedule
 				{
 					Template	T_TFBot_Soldier_BurstFire
 					ClassIcon	soldier_burstfire_hyper_lite
-					Name		"Giga Burst Fire Soldier"
+					Name		"Five Nights at Critspam"
 					Item		"Tyrantium Helmet"
 					Item 		"The Gunboats"
 					Item 		"The Man in Slacks"
